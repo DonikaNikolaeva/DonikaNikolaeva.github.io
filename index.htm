@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donika Nikolaeva | Bridging Business Leadership & Deep Academic Research</title>
+    <!-- FontAwesome Pro/Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-hero: #FAFAFD;
+            --bg-sec-light: #FFFFFF;
+            --bg-sec-violet: #F5F0FF;
+            --bg-sec-dark: #0F172A;
+            --text-dark: #0F172A;
+            --text-light: #F8FAFC;
+            --text-muted: #64748B;
+            --text-muted-dark: #94A3B8;
+            --accent-violet: #7C3AED;
+            --accent-violet-light: #EDE9FE;
+            --accent-cyan: #06B6D4;
+            --border-light: #E2E8F0;
+            --border-hover: #C084FC;
+            --shadow-soft: 0 10px 30px -10px rgba(124, 58, 237, 0.08);
+            --shadow-hover: 0 20px 40px -12px rgba(124, 58, 237, 0.2);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-hero);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 250, 253, 0.85);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .brand-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.03em;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-violet);
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--accent-violet);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .lang-switcher-wrap {
+            position: relative;
+        }
+
+        .lang-select {
+            appearance: none;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            outline: none;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .lang-select:hover {
+            border-color: var(--accent-violet);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+        }
+
+        /* --- HERO & ABOVE-THE-FOLD CORE FOCUS SECTION --- */
+        .hero-section {
+            padding: 50px 0 80px 0;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-header {
+            text-align: center;
+            max-width: 960px;
+            margin: 0 auto 50px auto;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #0F172A 0%, #6D28D9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--accent-violet);
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Pillars Badge Row */
+        .pillars-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .pillar-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(124, 58, 237, 0.25);
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .pillar-tag:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-violet);
+            background: var(--accent-violet-light);
+        }
+
+        /* Call To Action Row */
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--accent-violet);
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-cta:hover {
+            background: #6D28D9;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(124, 58, 237, 0.4);
+        }
+
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+        }
+
+        .icon-btn:hover {
+            background: var(--accent-violet);
+            color: #FFFFFF;
+            border-color: var(--accent-violet);
+            transform: translateY(-3px);
+        }
+
+        /* LANDING FOCUS CARDS (HOVER REVEAL AT LANDING) */
+        .landing-focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
+            margin-top: 20px;
+        }
+
+        .focus-card {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+            transition: var(--transition);
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .focus-card-default {
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .focus-card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            background: var(--accent-violet-light);
+            color: var(--accent-violet);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 16px auto;
+        }
+
+        .focus-card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .focus-card-hover {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+            color: #FFFFFF;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border-radius: var(--radius-lg);
+        }
+
+        .focus-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border-hover);
+        }
+
+        .focus-card:hover .focus-card-hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .focus-card-hover p {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: #F3E8FF;
+        }
+
+        /* --- SECTION DIFFERENTIATION WITH VARIED BACKGROUNDS --- */
+        section {
+            padding: 90px 0;
+            position: relative;
+        }
+
+        .sec-light {
+            background-color: var(--bg-sec-light);
+        }
+
+        .sec-violet {
+            background-color: var(--bg-sec-violet);
+            border-top: 1px solid rgba(124, 58, 237, 0.1);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+        }
+
+        .sec-dark {
+            background-color: var(--bg-sec-dark);
+            color: var(--text-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .sec-dark .section-title p {
+            color: var(--text-muted-dark);
+        }
+
+        /* --- HORIZONTAL TIMELINE SECTION (PAST TO PRESENT) --- */
+        .timeline-horizontal-wrap {
+            position: relative;
+            overflow-x: auto;
+            padding: 40px 10px 60px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-violet) transparent;
+        }
+
+        .timeline-track {
+            display: flex;
+            gap: 32px;
+            position: relative;
+            min-width: 1000px;
+            justify-content: space-between;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #CBD5E1, var(--accent-violet), #10B981);
+            z-index: 1;
+        }
+
+        .time-node-item {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .node-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 4px solid var(--accent-violet);
+            box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+            transition: var(--transition);
+            cursor: pointer;
+            margin-top: 31px;
+        }
+
+        /* PRESENT NODE SPECIAL STYLING */
+        .time-node-item.present-node .node-dot {
+            width: 24px;
+            height: 24px;
+            margin-top: 29px;
+            background: #10B981;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 0 0 4px #10B981, 0 0 20px rgba(16, 185, 129, 0.8);
+            animation: presentPulse 2s infinite;
+        }
+
+        @keyframes presentPulse {
+            0% { box-shadow: 0 0 0 3px #10B981, 0 0 10px rgba(16, 185, 129, 0.5); }
+            50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.2), 0 0 25px rgba(16, 185, 129, 0.9); }
+            100% { box-shadow: 0 0 0 3px #10B981, 0 0 10px rgba(16, 185, 129, 0.5); }
+        }
+
+        .time-node-item:hover .node-dot {
+            transform: scale(1.4);
+        }
+
+        .time-node-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-violet);
+            background: #FFFFFF;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-hover);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            margin-bottom: 8px;
+        }
+
+        .time-node-item.present-node .time-node-badge {
+            color: #065F46;
+            background: #D1FAE5;
+            border-color: #34D399;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .node-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 24px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            width: 100%;
+            text-align: center;
+        }
+
+        .time-node-item.present-node .node-card {
+            border: 2px solid #34D399;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+        }
+
+        .time-node-item:hover .node-card {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .node-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .node-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* --- INDUSTRY CARDS WITH REFINED HIGH-TECH ICONS --- */
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .ind-flip-card {
+            background-color: transparent;
+            height: 280px;
+            perspective: 1200px;
+        }
+
+        .ind-flip-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .ind-flip-card:hover .ind-flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .ind-flip-front, .ind-flip-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .ind-flip-front {
+            background: #FFFFFF;
+        }
+
+        .front-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .ind-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: var(--accent-violet-light);
+            color: var(--accent-violet);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+        }
+
+        .ind-era-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-violet);
+            background: var(--accent-violet-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .ind-front-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 16px;
+        }
+
+        .ind-front-sub {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .ind-flip-back {
+            transform: rotateY(180deg);
+            background: #FFFFFF;
+            border-color: var(--border-hover);
+            text-align: left;
+        }
+
+        .ind-back-role {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-violet);
+            margin-bottom: 4px;
+        }
+
+        .ind-back-company {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .ind-back-time {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .ind-back-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* --- CERTIFICATIONS SECTION (IN DARK BACKGROUND) --- */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-violet);
+            transform: translateY(-4px);
+        }
+
+        .cert-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(124, 58, 237, 0.2);
+            color: #C084FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .cert-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted-dark);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: var(--bg-sec-dark);
+            color: var(--text-muted-dark);
+            font-size: 0.875rem;
+        }
+
+        /* --- SCROLL ANIMATION CLASS --- */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE FIXES */
+        @media screen and (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .timeline-track { min-width: 800px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <div class="container">
+        <nav>
+            <div class="brand-logo">
+                <div class="pulse-dot"></div> Donika Nikolaeva
+            </div>
+            <div class="nav-right">
+                <div class="lang-switcher-wrap">
+                    <select class="lang-select" id="langSwitcher" onchange="changeLanguage(this.value)">
+                        <option value="en">ENG</option>
+                        <option value="es">ESP</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO & LANDING CORE FOCUS SECTION (ABOVE THE FOLD) -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-header">
+                <h1 class="hero-title" id="hero-title">Bridging Business Leadership & Deep Academic Research</h1>
+                <div class="hero-subtitle" id="hero-subtitle">Senior Product Leader and PhD Researcher</div>
+                
+                <!-- PILLARS BELOW TITLE -->
+                <div class="pillars-row">
+                    <div class="pillar-tag"><i class="fa-solid fa-chart-line"></i> <span id="p1">Business Management</span></div>
+                    <div class="pillar-tag"><i class="fa-solid fa-lightbulb"></i> <span id="p2">Tech Innovation</span></div>
+                    <div class="pillar-tag"><i class="fa-solid fa-shield-halved"></i> <span id="p3">Responsible AI</span></div>
+                </div>
+
+                <!-- CALL TO ACTION & DIRECT CONTACT -->
+                <div class="cta-row">
+                    <a href="mailto:nikolaevadonika@gmail.com" class="btn-cta">
+                        <i class="fa-regular fa-paper-plane"></i> <span id="cta-btn">Contact me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/donkanikolaeva" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CORE FOCUS AREAS ON LANDING (HOVER OVER TO READ TEXT) -->
+            <div class="landing-focus-grid">
+                
+                <!-- Focus Card 1 -->
+                <div class="focus-card">
+                    <div class="focus-card-default">
+                        <div class="focus-card-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="focus-card-title" id="fc1-title">Deep Academic Research</div>
+                    </div>
+                    <div class="focus-card-hover">
+                        <p id="fc1-desc">PhD Research path at Universidad Politécnica de Madrid (UPM) focused on Human-Centered AI Adoption, Responsible AI governance, algorithmic trust, and decision-intelligence frameworks.</p>
+                    </div>
+                </div>
+
+                <!-- Focus Card 2 -->
+                <div class="focus-card">
+                    <div class="focus-card-default">
+                        <div class="focus-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div class="focus-card-title" id="fc2-title">Enterprise Product Leadership</div>
+                        <div class="focus-card-company" style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">(Symanto)</div>
+                    </div>
+                    <div class="focus-card-hover">
+                        <p id="fc2-desc">Leading end-to-end strategy for enterprise AI engines like ContextCore and AI Zwei BI platforms, turning complex operational needs into ethical analytics solutions.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HORIZONTAL TECH ADVANCEMENT TIMELINE (PAST -> PRESENT) -->
+    <section class="sec-violet reveal-on-scroll" id="timeline-sec">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="time-title">Tech Advancement Progression</h2>
+                <p id="time-sub">A continuous growth journey from core market foundations to cutting-edge AI research</p>
+            </div>
+
+            <div class="timeline-horizontal-wrap">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+
+                    <!-- Node 1 (Past) -->
+                    <div class="time-node-item">
+                        <span class="time-node-badge">2000 — 2011</span>
+                        <div class="node-dot"></div>
+                        <div class="node-card">
+                            <h4 id="tn1-h">Core PM & Telecom Infrastructure</h4>
+                            <p id="tn1-p">Mastering market positioning, digital navigation requirements, and multi-brand channel distribution.</p>
+                        </div>
+                    </div>
+
+                    <!-- Node 2 -->
+                    <div class="time-node-item">
+                        <span class="time-node-badge">2012 — 2016</span>
+                        <div class="node-dot"></div>
+                        <div class="node-card">
+                            <h4 id="tn2-h">Healthcare & Data Analytics</h4>
+                            <p id="tn2-p">Formalizing structured MBA management and launching regulated medical product portfolios.</p>
+                        </div>
+                    </div>
+
+                    <!-- Node 3 -->
+                    <div class="time-node-item">
+                        <span class="time-node-badge">2017 — 2021</span>
+                        <div class="node-dot"></div>
+                        <div class="node-card">
+                            <h4 id="tn3-h">EdTech & Digital Platforms</h4>
+                            <p id="tn3-p">Leading preparation platforms, virtual event engines, and international academic partner networks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Node 4 (PRESENT - HIGHLIGHTED) -->
+                    <div class="time-node-item present-node">
+                        <span class="time-node-badge" id="tn4-badge"><i class="fa-solid fa-circle-play"></i> Present (2021+)</span>
+                        <div class="node-dot" title="Current Leadership & PhD Era"></div>
+                        <div class="node-card">
+                            <h4 id="tn4-h">Enterprise AI & PhD Path</h4>
+                            <p id="tn4-p">Spearheading contextual AI engines and doctoral research in Human-Centered AI Adoption at UPM.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INDUSTRY LEADERSHIP (PRESENT TO OLDEST STORY OF GROWTH) -->
+    <section class="sec-light reveal-on-scroll" id="industries-sec">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="ind-title">Industry Leadership & Evolutionary Impact</h2>
+                <p id="ind-sub" style="font-weight:600; color:var(--accent-violet);">Scaling domain complexity through leadership, strategic growth, and technological transformation</p>
+            </div>
+
+            <div class="industry-grid">
+
+                <!-- 1. Enterprise AI & Cognitive BI -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                                <span class="ind-era-tag">2021 – Present</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i1-title">Enterprise AI & Cognitive BI</div>
+                                <div class="ind-front-sub">Shared Intelligence Engines</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Senior Product Manager</div>
+                            <div class="ind-back-company">Symanto</div>
+                            <div class="ind-back-time">(May 2021 – Present)</div>
+                            <div class="ind-back-desc" id="i1-desc">Leading ContextCore and AI Zwei platforms, bridging AI innovation with human-centered trust for enterprise decisions.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Visual Content Analytics -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                                <span class="ind-era-tag">2022</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i2-title">Visual Content Analytics</div>
+                                <div class="ind-front-sub">Automated Visual Platforms</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Senior Product Manager – Analytics</div>
+                            <div class="ind-back-company">BOOM</div>
+                            <div class="ind-back-time">(May 2022 – Nov 2022)</div>
+                            <div class="ind-back-desc" id="i2-desc">Developed data-based analytics products for visual assets and managed quantitative discovery roadmaps.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Higher Education & EdTech -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <span class="ind-era-tag">2017 – 2021</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i3-title">Higher Education & EdTech</div>
+                                <div class="ind-front-sub">Virtual Learning & Events</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Senior Product Manager</div>
+                            <div class="ind-back-company">Advent Group</div>
+                            <div class="ind-back-time">(Nov 2017 – Apr 2021)</div>
+                            <div class="ind-back-desc" id="i3-desc">Managed UnimyPrep platforms, virtual events, and international partnership networks for higher education.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Healthcare & Medical Devices -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
+                                <span class="ind-era-tag">2013 – 2015</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i4-title">Healthcare & Medical Devices</div>
+                                <div class="ind-front-sub">Regulated Health Systems</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Product Manager – Medical Devices</div>
+                            <div class="ind-back-company">Medica AD</div>
+                            <div class="ind-back-time">(Mar 2013 – May 2015)</div>
+                            <div class="ind-back-desc" id="i4-desc">Led new product launches, regulatory alignment, and technical field force enablement.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Telecom & Digital Navigation -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <span class="ind-era-tag">2008 – 2011</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i5-title">Telecom & Navigation</div>
+                                <div class="ind-front-sub">Spatial & Brand Management</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Product & Brand Manager</div>
+                            <div class="ind-back-company">Naviteq & Spectrum Net</div>
+                            <div class="ind-back-time">(Jun 2008 – Jun 2011)</div>
+                            <div class="ind-back-desc" id="i5-desc">Defined digital navigation product vision and managed enterprise telecom brand positioning.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. FMCG & Consumer Goods -->
+                <div class="ind-flip-card">
+                    <div class="ind-flip-inner">
+                        <div class="ind-flip-front">
+                            <div class="front-top">
+                                <div class="ind-icon-box"><i class="fa-solid fa-cart-flatbed"></i></div>
+                                <span class="ind-era-tag">2000 – 2008</span>
+                            </div>
+                            <div>
+                                <div class="ind-front-title" id="i6-title">FMCG & Consumer Goods</div>
+                                <div class="ind-front-sub">Global Trade Expansion</div>
+                            </div>
+                        </div>
+                        <div class="ind-flip-back">
+                            <div class="ind-back-role">Product Manager</div>
+                            <div class="ind-back-company">Elite Coffee, Axxon, Avendi, Embassy KR</div>
+                            <div class="ind-back-time">(Dec 2000 – Jun 2008)</div>
+                            <div class="ind-back-desc" id="i6-desc">Guided brand strategy, supplier negotiations, market research, and multi-channel trade growth.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CERTIFICATIONS (DARK EXECUTIVE THEME) -->
+    <section class="sec-dark reveal-on-scroll" id="certifications-sec">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="cert-title">Education & Certifications</h2>
+                <p id="cert-sub">Selected professional qualifications in AI, ML, and Analytics</p>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>AI for Product Management</h4>
+                        <p>Google Cloud / Pendo / Mind the Product</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="cert-info">
+                        <h4>Machine Learning Foundations for PMs</h4>
+                        <p>Duke University (Coursera)</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="cert-info">
+                        <h4>Decision Intelligence</h4>
+                        <p>LinkedIn Learning</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="cert-info">
+                        <h4>Digital Marketing Analytics in Theory</h4>
+                        <p>University of Illinois Urbana-Champaign</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="cert-info">
+                        <h4>Gamification</h4>
+                        <p>Wharton School, University of Pennsylvania</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="cert-info">
+                        <h4>Google Analytics & Video Certifications</h4>
+                        <p>Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p id="footer-text">&copy; Donika Nikolaeva. Dedicated to responsible business leadership & human-centered AI research.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTION & TRANSLATION SCRIPTS -->
+    <script>
+        // --- SCROLL ANIMATION OBSERVER ---
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        });
+
+        // --- DICTIONARY FOR LANGUAGE SWITCHER (ONLY ENG & ESP WITH NATURAL SPANISH CAPITALIZATION) ---
+        const translations = {
+            en: {
+                title: "Bridging Business Leadership & Deep Academic Research",
+                subtitle: "Senior Product Leader and PhD Researcher",
+                p1: "Business Management", p2: "Tech Innovation", p3: "Responsible AI",
+                cta: "Contact me",
+                fc1T: "Deep Academic Research",
+                fc1D: "PhD Research path at Universidad Politécnica de Madrid (UPM) focused on Human-Centered AI Adoption, Responsible AI governance, algorithmic trust, and decision-intelligence frameworks.",
+                fc2T: "Enterprise Product Leadership",
+                fc2D: "Leading end-to-end strategy for enterprise AI engines like ContextCore and AI Zwei BI platforms, turning complex operational needs into ethical analytics solutions.",
+                timeTitle: "Tech Advancement Progression",
+                timeSub: "A continuous growth journey from core market foundations to cutting-edge AI research",
+                tn4Badge: '<i class="fa-solid fa-circle-play"></i> Present (2021+)',
+                indTitle: "Industry Leadership & Evolutionary Impact",
+                indSub: "Scaling domain complexity through leadership, strategic growth, and technological transformation",
+                certTitle: "Education & Certifications",
+                certSub: "Selected professional qualifications in AI, ML, and Analytics",
+                footer: "© Donika Nikolaeva. Dedicated to responsible business leadership & human-centered AI research."
+            },
+            es: {
+                title: "Uniendo liderazgo empresarial e investigación académica profunda",
+                subtitle: "Líder de producto e investigadora PhD",
+                p1: "Gestión empresarial", p2: "Innovación tecnológica", p3: "IA responsable",
+                cta: "Contáctame",
+                fc1T: "Investigación académica profunda",
+                fc1D: "Investigación PhD en la Universidad Politécnica de Madrid (UPM) centrada en la adopción responsable de la IA, confianza algorítmica y marcos de decisión.",
+                fc2T: "Liderazgo de producto empresarial",
+                fc2D: "Liderando la estrategia de motores de IA empresarial como ContextCore y AI Zwei, transformando necesidades operativas en soluciones analíticas éticas.",
+                timeTitle: "Progreso tecnológico",
+                timeSub: "Un trayecto de crecimiento continuo desde las bases del mercado hasta la investigación de IA",
+                tn4Badge: '<i class="fa-solid fa-circle-play"></i> Presente (2021+)',
+                indTitle: "Liderazgo industrial e impacto evolutivo",
+                indSub: "Escalando la complejidad mediante liderazgo, crecimiento estratégico y transformación tecnológica",
+                certTitle: "Educación y certificaciones",
+                certSub: "Cualificaciones profesionales seleccionadas en IA, ML y analítica",
+                footer: "© Donika Nikolaeva. Dedicada al liderazgo empresarial responsable y la investigación en IA."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const t = translations[lang] || translations.en;
+            document.getElementById('hero-title').innerText = t.title;
+            document.getElementById('hero-subtitle').innerText = t.subtitle;
+            document.getElementById('p1').innerText = t.p1;
+            document.getElementById('p2').innerText = t.p2;
+            document.getElementById('p3').innerText = t.p3;
+            document.getElementById('cta-btn').innerText = t.cta;
+            document.getElementById('fc1-title').innerText = t.fc1T;
+            document.getElementById('fc1-desc').innerText = t.fc1D;
+            document.getElementById('fc2-title').innerText = t.fc2T;
+            document.getElementById('fc2-desc').innerText = t.fc2D;
+            document.getElementById('time-title').innerText = t.timeTitle;
+            document.getElementById('time-sub').innerText = t.timeSub;
+            document.getElementById('tn4-badge').innerHTML = t.tn4Badge;
+            document.getElementById('ind-title').innerText = t.indTitle;
+            document.getElementById('ind-sub').innerText = t.indSub;
+            document.getElementById('cert-title').innerText = t.certTitle;
+            document.getElementById('cert-sub').innerText = t.certSub;
+            document.getElementById('footer-text').innerText = t.footer;
+        }
+    </script>
+</body>
+</html>
