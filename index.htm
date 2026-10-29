@@ -1369,12 +1369,25 @@
         });
 
         // --- MOBILE TOUCH & FLIP CARDS INTERACTION ---
+        // --- MOBILE TOUCH & FLIP CARDS INTERACTION (TOGGLE OPEN / CLOSE) ---
         function toggleFlipCard(cardEl) {
-            cardEl.classList.toggle('is-flipped');
+            const isFlipped = cardEl.classList.contains('is-flipped');
+            // Close all other open industry flip cards first
+            document.querySelectorAll('.ind-flip-card').forEach(c => c.classList.remove('is-flipped'));
+            // If it wasn't flipped, open it; if it was, leave it closed
+            if (!isFlipped) {
+                cardEl.classList.add('is-flipped');
+            }
         }
 
         function toggleFocusCard(cardEl) {
-            cardEl.classList.toggle('is-active');
+            const isActive = cardEl.classList.contains('is-active');
+            // Close all other focus cards first
+            document.querySelectorAll('.focus-card').forEach(c => c.classList.remove('is-active'));
+            // If it wasn't active, open it; if it was, leave it closed
+            if (!isActive) {
+                cardEl.classList.add('is-active');
+            }
         }
 
         // --- MOBILE TIMELINE INITIALIZATION, NAV & SCROLL RE-CENTERING ---
